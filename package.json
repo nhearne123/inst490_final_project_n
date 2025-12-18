@@ -1,0 +1,14 @@
+{
+    "name": "inst490_final_project_n",
+    "version": "1.0.0",
+    "type": "commonjs",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "@supabase/supabase-js": "^2.39.7",
+      "express": "^4.19.2",
+      "node-fetch": "^3.3.2"
+    }
+  }
+  

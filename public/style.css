@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  a {
+    margin-right: 10px;
+  }
+  
+  .swiper-slide {
+    padding: 15px;
+    border: 1px solid #ccc;
+  }
+  
