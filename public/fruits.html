@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fruits</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- JS Library #1: Swiper (slider) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+  <div class="page-container">
+
+    <!-- HEADER BOX -->
+    <section class="box header-box">
+      <h1>🍎 Fruit Database</h1>
+      <p>Browse nutrition data (Fruityvice via your backend proxy)</p>
+    </section>
+
+    <!-- NAV BOX -->
+    <section class="box nav-box">
+      <a href="index.html">Home</a>
+      <a href="fruits.html">Fruits</a>
+      <a href="about.html">About</a>
+    </section>
+
+    <!-- LOAD + SEARCH -->
+    <section class="box">
+      <button id="loadFruits">Load Fruits</button>
+
+      <div class="controls">
+        <div>
+          <label for="fruitSelect"><strong>Pick a fruit:</strong></label>
+          <select id="fruitSelect">
+            <option value="">(Load fruits first)</option>
+          </select>
+        </div>
+
+        <button id="viewFruitBtn" class="secondary-btn">View Details</button>
+      </div>
+
+      <p id="statusMsg" class="status"></p>
+    </section>
+
+    <!-- SLIDER (Swiper) -->
+    <section class="box">
+      <h3 class="section-title">✨ Featured Fruits (Swiper Library)</h3>
+
+      <div class="swiper" id="fruitSwiper">
+        <div class="swiper-wrapper" id="swiperWrapper"></div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!-- DETAILS -->
+    <section class="box">
+      <h3 class="section-title">🍉 Fruit Details</h3>
+      <div id="fruitDetails" class="details-card">
+        <p class="muted">Load fruits, pick one, then click “View Details”.</p>
+      </div>
+    </section>
+
+    <!-- CHART (Chart.js) -->
+    <section class="box">
+      <h3 class="section-title">📊 Nutrition Chart (Chart.js Library)</h3>
+      <div class="chart-wrap">
+        <canvas id="nutritionChart"></canvas>
+      </div>
+    </section>
+
+    <!-- FAVORITES (Supabase via backend) -->
+    <section class="box">
+      <div class="fav-header">
+        <h3 class="section-title">⭐ Favorites (Saved in Supabase)</h3>
+        <button id="refreshFavoritesBtn" class="secondary-btn">Refresh Favorites</button>
+      </div>
+
+      <p id="favoritesStatus" class="status"></p>
+      <div id="favoritesList" class="fav-list"></div>
+    </section>
+
+    <!-- FOOTER BOX -->
+    <section class="box footer-box">
+      <p>Front-end uses Swiper + Chart.js and calls backend endpoints for Fruityvice + Supabase</p>
+    </section>
+
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- JS Library #2: Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>

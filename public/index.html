@@ -1,14 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Report of the Week</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Fruityvice App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🍔 The Report of the Week</h1>
-  <p>Fast food reviews using a public API</p>
 
-  <a href="explore.html">Explore Reviews</a> |
-  <a href="about.html">About</a>
+  <!-- ===== TOP CONTAINER ===== -->
+  <div class="page-container">
+
+    <!-- ===== HEADER BOX ===== -->
+    <section class="box header-box">
+      <h1>🍉 Fruityvice Explorer</h1>
+      <p>Organized fruit nutrition data using a public REST API</p>
+      <a href="fruits.html" class="primary-btn">Browse Fruits</a>
+    </section>
+
+    <!-- ===== NAV BOX ===== -->
+    <section class="box nav-box">
+      <a href="index.html">Home</a>
+      <a href="fruits.html">Fruits</a>
+      <a href="about.html">About</a>
+    </section>
+
+    <!-- ===== INFO BOXES ===== -->
+    <section class="info-grid">
+
+      <div class="box info-box">
+        <h3>🍎 What This App Does</h3>
+        <p>
+          Displays real-time fruit nutrition data using the
+          Fruityvice API and JavaScript Fetch.
+        </p>
+      </div>
+
+      <div class="box info-box">
+        <h3>⚙️ How It Works</h3>
+        <p>
+          Data is requested from a REST endpoint and rendered
+          dynamically on the page.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ===== FOOTER BOX ===== -->
+    <section class="box footer-box">
+      <p>INST377 Final Project · Powered by Fruityvice API</p>
+    </section>
+
+  </div>
+
 </body>
 </html>

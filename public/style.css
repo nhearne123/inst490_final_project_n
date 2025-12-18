@@ -1,14 +1,303 @@
-body {
+/* =========================================
+   Modern Site Styles (Full Updated Sheet)
+   ========================================= */
+
+/* Reset / base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
     font-family: Arial, sans-serif;
+    background: #f5f5f5;
     padding: 20px;
+    color: #222;
   }
   
-  a {
-    margin-right: 10px;
+  /* Page wrapper */
+  .page-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
   }
   
-  .swiper-slide {
+  /* Card / box sections */
+  .box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Header */
+  .header-box {
+    text-align: center;
+  }
+  
+  .header-box h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .header-box p {
+    color: #666;
+  }
+ 
+  /* Info grid styled like About page boxes */
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Nav */
+  .nav-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .nav-box a {
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: #2f855a;
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .nav-box a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  }
+  
+  /* Buttons */
+  button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    background: #2f855a;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Secondary button */
+  .secondary-btn {
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #1f2937;
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .secondary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Center text helper */
+  .center {
+    text-align: center;
+  }
+  
+  /* Titles / helper text */
+  .section-title {
+    margin-bottom: 10px;
+    color: #2f855a;
+  }
+  
+  .muted {
+    color: #666;
+  }
+  
+  /* Status messages */
+  .status {
+    margin-top: 12px;
+    text-align: center;
+  }
+  
+  .status.error {
+    color: #b91c1c;
+    font-weight: bold;
+  }
+  
+  /* Controls row (dropdown + button) */
+  .controls {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  select {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    min-width: 240px;
+    background: #fff;
+  }
+  
+  /* Fruit list / results */
+  #fruitList,
+  #fruitDetails {
+    margin-top: 15px;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  #fruitList div {
+    background: #f9f9f9;
     padding: 15px;
-    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-left: 6px solid #2f855a;
+  }
+  
+  /* Details card */
+  .details-card hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 12px 0;
+  }
+  
+  /* Swiper slider */
+  #fruitSwiper {
+    padding: 10px 6px 30px;
+  }
+  
+  .slide-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .slide-card h4 {
+    margin-bottom: 6px;
+  }
+  
+  .mini-btn {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Chart.js canvas wrapper (keeps it from squishing) */
+  .chart-wrap {
+    height: 320px;
+  }
+  
+  /* Form grid for "Add Fruit" */
+  .form-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+  
+  .form-grid input {
+    padding: 12px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Footer */
+  .footer-box {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    body {
+      padding: 12px;
+    }
+  
+    .box {
+      padding: 16px;
+    }
+  
+    .header-box h1 {
+      font-size: 1.6rem;
+    }
+  
+    select {
+      min-width: 200px;
+    }
+  }
+  
+  /* Favorites section */
+.fav-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .fav-list {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+  }
+  
+  .fav-item {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 12px;
+    border-left: 6px solid #2f855a;
+  }
+  
+  .fav-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  .fav-notes {
+    margin-bottom: 6px;
+  }
+  
+  .fav-save {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .fav-save input {
+    padding: 12px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    min-width: 220px;
+    flex: 1;
   }
   
